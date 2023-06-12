@@ -2,8 +2,9 @@ from flask import Flask, jsonify, request
 
 app = Flask(__name__)
 
-@app.route('/even_numbers/<int:n>', methods=['GET'])
-def generate_even_numbers(n):
+@app.route('/', methods=['GET'])
+def generate_even_numbers():
+    n = 10
     if n < 0:
         return jsonify({'error': 'Invalid input. Please provide a non-negative integer.'}), 400
     
