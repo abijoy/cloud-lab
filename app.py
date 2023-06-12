@@ -14,7 +14,10 @@ def generate_even_numbers():
     
     even_numbers = [i for i in range(2, (n * 2) + 1, 2)]
     
-    return jsonify({'even_numbers': str(even_numbers)})
+    return jsonify({
+        'n': str(n),
+        'even_numbers': str(even_numbers)
+        })
 
 if __name__ == '__main__':
     app.run()
