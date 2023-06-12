@@ -25,7 +25,7 @@ def matrix_multiply():
             for k in range(cols1):
                 result[i][j] += matrix1[i][k] * matrix2[k][j]
 
-    return jsonify({'result': result})
+    return result
 
 if __name__ == '__main__':
     app.run()
